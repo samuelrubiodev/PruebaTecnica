@@ -1,12 +1,14 @@
-package dev.samuelrubio;
+package dev.samuelrubio.clases;
+
+import dev.samuelrubio.DispositivoAlmacenamiento;
 
 public class Cd extends DispositivoAlmacenamiento {
 
     private String tipoLector; // (DVD-ROM, CD-ROM, etc.)
     private boolean esRegradable; // Si es CD-R o CD-RW
 
-    public Cd(String marca, String nombre, int capacidad, String tipoDisco, String tipoLector, boolean esRegradable) {
-        super(marca,nombre, capacidad, tipoDisco);
+    public Cd(String marca, String nombre, double velocidadGiro, int capacidad, String tipoDisco, String tipoLector, boolean esRegradable, boolean soloLectura) {
+        super(marca,nombre, velocidadGiro, capacidad, tipoDisco, soloLectura);
         this.esRegradable = esRegradable;
         this.tipoLector = tipoLector;
     }

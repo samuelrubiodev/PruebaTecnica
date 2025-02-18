@@ -3,22 +3,26 @@ package dev.samuelrubio;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class DispositivoAlmacenamiento {
+public abstract class DispositivoAlmacenamiento extends ObjetoGiratorio {
 
     private final String marca;
     private String nombre;
     private int capacidad; // GB
     private List<String> contenido;
     private String tipoDisco;
+    private final boolean soloLectura;
 
-    public DispositivoAlmacenamiento(String marca, String nombre, int capacidad, String tipoDisco) {
+    public DispositivoAlmacenamiento(String marca, String nombre, double velocidadGiro, int capacidad, String tipoDisco, boolean soloLectura) {
+        super(marca, nombre, velocidadGiro);
         this.marca = marca;
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.tipoDisco = tipoDisco;
         this.contenido = new ArrayList<>();
+        this.soloLectura = soloLectura;
     }
 
+    @Override
     public abstract void girar();
     public abstract void escribir(String dato);
     public abstract void leer();
@@ -28,12 +32,17 @@ public abstract class DispositivoAlmacenamiento {
         System.out.println("Dato almacenado....");
     }
 
+    @Override
     public void mostrarInformacion() {
-        System.out.println("Marca: " + marca);
-        System.out.println("Nombre: " + nombre);
+        super.mostrarInformacion();
+        System.out.println("Es solo Lectura? : " + (soloLectura ? "Sí" : "No"));
         System.out.println("Capacidad: " + capacidad + " GB");
         System.out.println("Tipo de disco: " + tipoDisco);
         System.out.println("Contenido: " + contenido);
+    }
+
+    public boolean isSoloLectura() {
+        return soloLectura;
     }
 
     public String getNombre() {

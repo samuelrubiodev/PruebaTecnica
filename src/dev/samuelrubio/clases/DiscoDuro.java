@@ -1,14 +1,14 @@
-package dev.samuelrubio;
+package dev.samuelrubio.clases;
 
-public class DiscoDuro extends DispositivoAlmacenamiento{
+import dev.samuelrubio.DispositivoAlmacenamiento;
 
-    private int rpm;
+public class DiscoDuro extends DispositivoAlmacenamiento {
+
     private String tipoConexion; // (SATA, IDE, etc.)
     private boolean esSSD;
 
-    public DiscoDuro(String marca, String nombre, int capacidad, String tipoDisco, int rpm, String tipoConexion, boolean esSSD) {
-        super(marca, nombre, capacidad, tipoDisco);
-        this.rpm = rpm;
+    public DiscoDuro(String marca, String nombre, double velocidadGiro, int capacidad, String tipoDisco, String tipoConexion, boolean esSSD, boolean soloLectura) {
+        super(marca, nombre, velocidadGiro, capacidad, tipoDisco, soloLectura);
         this.tipoConexion = tipoConexion;
         this.esSSD = esSSD;
     }
@@ -32,17 +32,8 @@ public class DiscoDuro extends DispositivoAlmacenamiento{
     @Override
     public void mostrarInformacion() {
         super.mostrarInformacion();
-        System.out.println("RPM: " + rpm);
         System.out.println("Tipo de conexión: " + tipoConexion);
         System.out.println("Es SSD: " + (esSSD ? "Sí" : "No"));
-    }
-
-    public int getRpm() {
-        return rpm;
-    }
-
-    public void setRpm(int rpm) {
-        this.rpm = rpm;
     }
 
     public String getTipoConexion() {
