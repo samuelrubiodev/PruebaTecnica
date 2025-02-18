@@ -30,6 +30,12 @@ public class Cd extends DispositivoAlmacenamiento {
     }
 
     @Override
+    public void limpiarContenido() {
+        super.getContenido().clear();
+        System.out.println("Limpiando contenido del CD.");
+    }
+
+    @Override
     public void mostrarInformacion() {
         super.mostrarInformacion();
         System.out.println("Tipo de lector: " + tipoLector);

@@ -22,6 +22,10 @@ public class Rueda extends ObjetoGiratorio {
         System.out.println("Rueda girando..");
     }
 
+    public void detener() {
+        System.out.println("Rueda detenida.");
+    }
+
     @Override
     public void mostrarInformacion() {
         super.mostrarInformacion();

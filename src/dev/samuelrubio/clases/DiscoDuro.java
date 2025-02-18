@@ -25,6 +25,12 @@ public class DiscoDuro extends DispositivoAlmacenamiento {
     }
 
     @Override
+    public void limpiarContenido() {
+        super.getContenido().clear();
+        System.out.println("Limpiando contenido del disco duro.");
+    }
+
+    @Override
     public void leer() {
         System.out.println("Leyendo datos del disco duro mediante el uso del cabezal magnético.");
     }

@@ -32,6 +32,8 @@ public abstract class DispositivoAlmacenamiento extends ObjetoGiratorio {
         System.out.println("Dato almacenado....");
     }
 
+    public abstract void limpiarContenido();
+
     @Override
     public void mostrarInformacion() {
         super.mostrarInformacion();

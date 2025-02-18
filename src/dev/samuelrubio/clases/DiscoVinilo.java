@@ -29,6 +29,20 @@ public class DiscoVinilo extends DispositivoAlmacenamiento {
     }
 
     @Override
+    public void limpiarContenido() {
+        super.getContenido().clear();
+        System.out.println("Limpiando el disco de vinilo.");
+    }
+
+    public void reproducirMusica() {
+        System.out.println("Reproduciendo disco de vinilo...");
+    }
+
+    public void detenerReproduccionMusica() {
+        System.out.println("Deteniendo reproducción de disco de vinilo...");
+    }
+
+    @Override
     public void mostrarInformacion() {
         super.mostrarInformacion();
         System.out.println("Tipo: " + tipo);

@@ -33,6 +33,20 @@ public class BlueRay extends DispositivoAlmacenamiento {
         System.out.println("Leyendo datos del disco Blue Ray mediante el uso del láser.");
     }
 
+    public void reproducirVideo() {
+        System.out.println("Reproduciendo video del Blue Ray...");
+    }
+
+    public void detenerReproduccionVideo() {
+        System.out.println("Deteniendo reproducción de video del Blue Ray...");
+    }
+
+    @Override
+    public void limpiarContenido() {
+        super.getContenido().clear();
+        System.out.println("Limpiando contenido del Blue Ray");
+    }
+
     public String getTipoLaser() {
         return tipoLaser;
     }

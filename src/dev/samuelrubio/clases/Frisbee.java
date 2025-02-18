@@ -22,6 +22,10 @@ public class Frisbee extends ObjetoGiratorio {
         System.out.println("Frisbee girando..");
     }
 
+    public void lanzar() {
+        System.out.println("Frisbee lanzado!");
+    }
+
     @Override
     public void mostrarInformacion() {
         super.mostrarInformacion();
