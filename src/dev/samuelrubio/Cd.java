@@ -5,8 +5,8 @@ public class Cd extends DispositivoAlmacenamiento {
     private String tipoLector; // (DVD-ROM, CD-ROM, etc.)
     private boolean esRegradable; // Si es CD-R o CD-RW
 
-    public Cd(String nombre, int capacidad, String tipoDisco, String tipoLector, boolean esRegradable) {
-        super(nombre, capacidad, tipoDisco);
+    public Cd(String marca, String nombre, int capacidad, String tipoDisco, String tipoLector, boolean esRegradable) {
+        super(marca,nombre, capacidad, tipoDisco);
         this.esRegradable = esRegradable;
         this.tipoLector = tipoLector;
     }
@@ -25,6 +25,13 @@ public class Cd extends DispositivoAlmacenamiento {
     @Override
     public void leer() {
         System.out.println("Leyendo datos del CD con uso del laser.");
+    }
+
+    @Override
+    public void mostrarInformacion() {
+        super.mostrarInformacion();
+        System.out.println("Tipo de lector: " + tipoLector);
+        System.out.println("Es regrabable: " + (esRegradable ? "Sí" : "No"));
     }
 
     public String getTipoLector() {

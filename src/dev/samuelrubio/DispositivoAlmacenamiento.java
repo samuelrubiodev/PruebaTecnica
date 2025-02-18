@@ -5,12 +5,14 @@ import java.util.List;
 
 public abstract class DispositivoAlmacenamiento {
 
+    private final String marca;
     private String nombre;
     private int capacidad; // GB
     private List<String> contenido;
     private String tipoDisco;
 
-    public DispositivoAlmacenamiento(String nombre, int capacidad, String tipoDisco) {
+    public DispositivoAlmacenamiento(String marca, String nombre, int capacidad, String tipoDisco) {
+        this.marca = marca;
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.tipoDisco = tipoDisco;
@@ -24,6 +26,14 @@ public abstract class DispositivoAlmacenamiento {
     public void almacenarDato(String dato) {
         contenido.add(dato);
         System.out.println("Dato almacenado....");
+    }
+
+    public void mostrarInformacion() {
+        System.out.println("Marca: " + marca);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Capacidad: " + capacidad + " GB");
+        System.out.println("Tipo de disco: " + tipoDisco);
+        System.out.println("Contenido: " + contenido);
     }
 
     public String getNombre() {
@@ -56,5 +66,9 @@ public abstract class DispositivoAlmacenamiento {
 
     public void setTipoDisco(String tipoDisco) {
         this.tipoDisco = tipoDisco;
+    }
+
+    public String getMarca() {
+        return marca;
     }
 }
