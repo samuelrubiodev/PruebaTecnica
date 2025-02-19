@@ -3,6 +3,8 @@ package dev.samuelrubio.main;
 import dev.samuelrubio.DispositivoAlmacenamiento;
 import dev.samuelrubio.clases.*;
 
+import java.sql.SQLSyntaxErrorException;
+
 
 public class Main {
 
@@ -17,6 +19,7 @@ public class Main {
         System.out.println("----- CD -----\n");
 
         cd1.mostrarInformacion();
+        System.out.println("\n");
         cd1.girar();
         cd1.escribir("Datos de música");
         cd1.leer();
@@ -25,6 +28,7 @@ public class Main {
         System.out.println("\n----- Disco Duro -----\n");
 
         disco1.mostrarInformacion();
+        System.out.println("\n");
         disco1.girar();
         disco1.escribir("Datos de trabajo");
         disco1.leer();
@@ -35,16 +39,21 @@ public class Main {
         miVinilo.girar();
         miVinilo.escribir("Datos de música");
         miVinilo.leer();
+        miVinilo.reproducirMusica();
+        miVinilo.detenerReproduccionMusica();
+        System.out.println("\n");
         miVinilo.mostrarInformacion();
 
         System.out.println("\n----- Blue Ray -----\n");
 
         blueRay.mostrarInformacion();
+        System.out.println("\n");
         blueRay.girar();
         blueRay.escribir("Datos de video");
         blueRay.leer();
         blueRay.reproducirVideo();
         blueRay.detenerReproduccionVideo();
+        System.out.println("\n");
         blueRay.mostrarInformacion();
 
         System.out.println("\n----- Rueda -----\n");

@@ -22,7 +22,7 @@ public class DiscoVinilo extends DispositivoAlmacenamiento {
     }
 
     @Override
-    public void girar() {
+    public void girarDisco() {
         System.out.println("Disco de vinilo girando..");
     }
 

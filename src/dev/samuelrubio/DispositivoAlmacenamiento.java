@@ -27,7 +27,11 @@ public abstract class DispositivoAlmacenamiento extends ObjetoGiratorio {
     }
 
     @Override
-    public abstract void girar();
+    public void girar() {
+        girarDisco();
+    }
+
+    public abstract void girarDisco();
     public abstract void escribir(String dato);
     public abstract void leer();
 

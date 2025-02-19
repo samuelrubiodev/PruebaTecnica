@@ -18,7 +18,7 @@ public class DiscoDuro extends DispositivoAlmacenamiento {
     }
 
     @Override
-    public void girar() {
+    public void girarDisco() {
         System.out.println("Disco Duro girando..");
     }
 

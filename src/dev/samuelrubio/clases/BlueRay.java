@@ -18,7 +18,7 @@ public class BlueRay extends DispositivoAlmacenamiento {
     }
 
     @Override
-    public void girar() {
+    public void girarDisco() {
         System.out.println("Blue Ray girando ..");
     }
 
