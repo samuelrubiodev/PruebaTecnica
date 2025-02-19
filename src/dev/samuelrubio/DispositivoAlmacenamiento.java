@@ -5,14 +5,18 @@ import java.util.List;
 
 public abstract class DispositivoAlmacenamiento extends ObjetoGiratorio {
 
+    public enum TipoDisco {
+        HDD, SSD, CD, DVD, VINILO, BLUERAY, CD_R
+    }
+
     private final String marca;
     private String nombre;
-    private int capacidad; // GB
+    private int capacidad;
     private List<String> contenido;
-    private String tipoDisco;
+    private TipoDisco tipoDisco;
     private final boolean soloLectura;
 
-    public DispositivoAlmacenamiento(String marca, String nombre, double velocidadGiro, int capacidad, String tipoDisco, boolean soloLectura) {
+    public DispositivoAlmacenamiento(String marca, String nombre, double velocidadGiro, int capacidad, TipoDisco tipoDisco, boolean soloLectura) {
         super(marca, nombre, velocidadGiro);
         this.marca = marca;
         this.nombre = nombre;
@@ -71,11 +75,11 @@ public abstract class DispositivoAlmacenamiento extends ObjetoGiratorio {
         this.contenido = contenido;
     }
 
-    public String getTipoDisco() {
+    public TipoDisco getTipoDisco() {
         return tipoDisco;
     }
 
-    public void setTipoDisco(String tipoDisco) {
+    public void setTipoDisco(TipoDisco tipoDisco) {
         this.tipoDisco = tipoDisco;
     }
 

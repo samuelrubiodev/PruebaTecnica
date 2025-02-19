@@ -4,10 +4,17 @@ import dev.samuelrubio.DispositivoAlmacenamiento;
 
 public class Cd extends DispositivoAlmacenamiento {
 
-    private String tipoLector; // (DVD-ROM, CD-ROM, etc.)
+    public enum TipoLector {
+        DVD_ROM,
+        CD_ROM,
+        DVD_RW,
+        CD_RW;
+    }
+
+    private TipoLector tipoLector;
     private boolean esRegradable; // Si es CD-R o CD-RW
 
-    public Cd(String marca, String nombre, double velocidadGiro, int capacidad, String tipoDisco, String tipoLector, boolean esRegradable, boolean soloLectura) {
+    public Cd(String marca, String nombre, double velocidadGiro, int capacidad, TipoDisco tipoDisco, TipoLector tipoLector, boolean esRegradable, boolean soloLectura) {
         super(marca,nombre, velocidadGiro, capacidad, tipoDisco, soloLectura);
         this.esRegradable = esRegradable;
         this.tipoLector = tipoLector;
@@ -42,11 +49,11 @@ public class Cd extends DispositivoAlmacenamiento {
         System.out.println("Es regrabable: " + (esRegradable ? "Sí" : "No"));
     }
 
-    public String getTipoLector() {
+    public TipoLector getTipoLector() {
         return tipoLector;
     }
 
-    public void setTipoLector(String tipoLector) {
+    public void setTipoLector(TipoLector tipoLector) {
         this.tipoLector = tipoLector;
     }
 

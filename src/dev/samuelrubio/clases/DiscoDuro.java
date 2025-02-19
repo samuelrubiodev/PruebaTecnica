@@ -4,10 +4,14 @@ import dev.samuelrubio.DispositivoAlmacenamiento;
 
 public class DiscoDuro extends DispositivoAlmacenamiento {
 
-    private String tipoConexion; // (SATA, IDE, etc.)
+    public enum TipoConexion {
+        SATA, IDE, SCSI, USB, FIREWIRE
+    }
+
+    private TipoConexion tipoConexion;
     private boolean esSSD;
 
-    public DiscoDuro(String marca, String nombre, double velocidadGiro, int capacidad, String tipoDisco, String tipoConexion, boolean esSSD, boolean soloLectura) {
+    public DiscoDuro(String marca, String nombre, double velocidadGiro, int capacidad, TipoDisco tipoDisco, TipoConexion tipoConexion, boolean esSSD, boolean soloLectura) {
         super(marca, nombre, velocidadGiro, capacidad, tipoDisco, soloLectura);
         this.tipoConexion = tipoConexion;
         this.esSSD = esSSD;
@@ -42,11 +46,11 @@ public class DiscoDuro extends DispositivoAlmacenamiento {
         System.out.println("Es SSD: " + (esSSD ? "Sí" : "No"));
     }
 
-    public String getTipoConexion() {
+    public TipoConexion getTipoConexion() {
         return tipoConexion;
     }
 
-    public void setTipoConexion(String tipoConexion) {
+    public void setTipoConexion(TipoConexion tipoConexion) {
         this.tipoConexion = tipoConexion;
     }
 

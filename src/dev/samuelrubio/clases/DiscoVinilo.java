@@ -4,10 +4,18 @@ import dev.samuelrubio.DispositivoAlmacenamiento;
 
 public class DiscoVinilo extends DispositivoAlmacenamiento {
 
-    private String tipo; // Simple, EP, LP
-    private String genero; // Rock, Pop, Clásica, etc.
+    public enum Tipo {
+        SIMPLE, EP, LP
+    }
 
-    public DiscoVinilo(String marca, String nombre, double velocidadGiro, int capacidad, String tipoDisco, boolean soloLectura, String tipo, String genero) {
+    public enum Genero {
+        ROCK, POP, CLASICA
+    }
+
+    private Tipo tipo;
+    private Genero genero;
+
+    public DiscoVinilo(String marca, String nombre, double velocidadGiro, int capacidad, TipoDisco tipoDisco, boolean soloLectura, Tipo tipo, Genero genero) {
         super(marca, nombre, velocidadGiro, capacidad, tipoDisco,soloLectura);
         this.tipo = tipo;
         this.genero = genero;
@@ -49,19 +57,19 @@ public class DiscoVinilo extends DispositivoAlmacenamiento {
         System.out.println("Genero: " + genero);
     }
 
-    public String getTipo() {
+    public Tipo getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(Tipo tipo) {
         this.tipo = tipo;
     }
 
-    public String getGenero() {
+    public Genero getGenero() {
         return genero;
     }
 
-    public void setGenero(String genero) {
+    public void setGenero(Genero genero) {
         this.genero = genero;
     }
 }

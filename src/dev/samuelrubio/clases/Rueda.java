@@ -4,12 +4,20 @@ import dev.samuelrubio.ObjetoGiratorio;
 
 public class Rueda extends ObjetoGiratorio {
 
-    private String material; // Goma, plástico, etc.
+    public enum TipoTerreno {
+        ASFALTO, TIERRA, ARENA
+    }
+
+    public enum Material {
+        GOMA, PLASTICO, METAL
+    }
+
+    private Material material; // Goma, plástico, etc.
     private double presion; // PSI
     private double diametro;
-    private String tipoTerreno; // Asfalto, tierra, etc.
+    private TipoTerreno tipoTerreno; // Asfalto, tierra, etc.
 
-    public Rueda(String marca, String nombre, double velocidadGiro, String material, double presion, double diametro, String tipoTerreno) {
+    public Rueda(String marca, String nombre, double velocidadGiro, Material material, double presion, double diametro, TipoTerreno tipoTerreno) {
         super(marca, nombre, velocidadGiro);
         this.material = material;
         this.presion = presion;
@@ -35,11 +43,11 @@ public class Rueda extends ObjetoGiratorio {
         System.out.println("Tipo de terreno: " + tipoTerreno);
     }
 
-    public String getMaterial() {
+    public Material getMaterial() {
         return material;
     }
 
-    public void setMaterial(String material) {
+    public void setMaterial(Material material) {
         this.material = material;
     }
 
@@ -59,11 +67,11 @@ public class Rueda extends ObjetoGiratorio {
         this.diametro = diametro;
     }
 
-    public String getTipoTerreno() {
+    public TipoTerreno getTipoTerreno() {
         return tipoTerreno;
     }
 
-    public void setTipoTerreno(String tipoTerreno) {
+    public void setTipoTerreno(TipoTerreno tipoTerreno) {
         this.tipoTerreno = tipoTerreno;
     }
 }

@@ -4,12 +4,16 @@ import dev.samuelrubio.ObjetoGiratorio;
 
 public class Frisbee extends ObjetoGiratorio {
 
+    public enum TipoVuelo {
+        LARGO, CORTO, MEDIO
+    }
+
     private boolean esCompeticion;  // Si es para competición oficial
     private double altura;        // Altura máxima de vuelo
-    private String tipoVuelo;     // Largo, corto, etc.
+    private TipoVuelo tipoVuelo;
     private boolean luminoso;     // Si luce en la oscuridad
 
-    public Frisbee(String marca, String nombre, double velocidadGiro,boolean esCompeticion, double altura, String tipoVuelo, boolean luminoso) {
+    public Frisbee(String marca, String nombre, double velocidadGiro,boolean esCompeticion, double altura, TipoVuelo tipoVuelo, boolean luminoso) {
         super(marca, nombre, velocidadGiro);
         this.esCompeticion = esCompeticion;
         this.altura = altura;
@@ -51,11 +55,11 @@ public class Frisbee extends ObjetoGiratorio {
         this.altura = altura;
     }
 
-    public String getTipoVuelo() {
+    public TipoVuelo getTipoVuelo() {
         return tipoVuelo;
     }
 
-    public void setTipoVuelo(String tipoVuelo) {
+    public void setTipoVuelo(TipoVuelo tipoVuelo) {
         this.tipoVuelo = tipoVuelo;
     }
 

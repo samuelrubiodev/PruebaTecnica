@@ -4,10 +4,14 @@ import dev.samuelrubio.DispositivoAlmacenamiento;
 
 public class BlueRay extends DispositivoAlmacenamiento {
 
-    private String tipoLaser;
+    public enum TipoLaser {
+        AZUL, ROJO, VERDE
+    }
+
+    private TipoLaser tipoLaser;
     private int logintudOnda;
 
-    public BlueRay(String marca, String nombre, double velocidadGiro, int capacidad, String tipoDisco, boolean soloLectura, String tipoLaser, int logintudOnda) {
+    public BlueRay(String marca, String nombre, double velocidadGiro, int capacidad, TipoDisco tipoDisco, boolean soloLectura, TipoLaser tipoLaser, int logintudOnda) {
         super(marca, nombre, velocidadGiro, capacidad, tipoDisco, soloLectura);
         this.tipoLaser = tipoLaser;
         this.logintudOnda = logintudOnda;
@@ -47,11 +51,11 @@ public class BlueRay extends DispositivoAlmacenamiento {
         System.out.println("Limpiando contenido del Blue Ray");
     }
 
-    public String getTipoLaser() {
+    public TipoLaser getTipoLaser() {
         return tipoLaser;
     }
 
-    public void setTipoLaser(String tipoLaser) {
+    public void setTipoLaser(TipoLaser tipoLaser) {
         this.tipoLaser = tipoLaser;
     }
 
