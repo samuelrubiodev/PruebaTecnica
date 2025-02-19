@@ -1,6 +1,6 @@
-package dev.samuelrubio.clases;
+package dev.samuelrubio.modelo.giratorio;
 
-import dev.samuelrubio.ObjetoGiratorio;
+import dev.samuelrubio.modelo.ObjetoGiratorio;
 
 public class Frisbee extends ObjetoGiratorio {
 
@@ -28,6 +28,10 @@ public class Frisbee extends ObjetoGiratorio {
 
     public void lanzar() {
         System.out.println("Frisbee lanzado!");
+    }
+
+    public void aterrizar() {
+        System.out.println("Frisbee aterrizado!");
     }
 
     @Override

@@ -1,10 +1,11 @@
-package dev.samuelrubio.main;
+package dev.samuelrubio;
 
-import dev.samuelrubio.DispositivoAlmacenamiento;
-import dev.samuelrubio.clases.*;
-
-import java.sql.SQLSyntaxErrorException;
-
+import dev.samuelrubio.modelo.DispositivoAlmacenamiento;
+import dev.samuelrubio.modelo.almacenamiento.BlueRay;
+import dev.samuelrubio.modelo.almacenamiento.Cd;
+import dev.samuelrubio.modelo.almacenamiento.DiscoDuro;
+import dev.samuelrubio.modelo.almacenamiento.DiscoVinilo;
+import dev.samuelrubio.modelo.giratorio.*;
 
 public class Main {
 
@@ -59,10 +60,12 @@ public class Main {
         System.out.println("\n----- Rueda -----\n");
         rueda.mostrarInformacion();
         rueda.girar();
+        rueda.detener();
 
         System.out.println("\n----- Frisbee -----\n");
         frisbee.mostrarInformacion();
         frisbee.girar();
-
+        frisbee.lanzar();
+        frisbee.aterrizar();
     }
 }

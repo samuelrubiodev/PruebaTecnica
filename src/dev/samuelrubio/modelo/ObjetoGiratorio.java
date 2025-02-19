@@ -1,4 +1,4 @@
-package dev.samuelrubio;
+package dev.samuelrubio.modelo;
 
 public abstract class ObjetoGiratorio {
 

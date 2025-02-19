@@ -1,6 +1,6 @@
-package dev.samuelrubio.clases;
+package dev.samuelrubio.modelo.almacenamiento;
 
-import dev.samuelrubio.DispositivoAlmacenamiento;
+import dev.samuelrubio.modelo.DispositivoAlmacenamiento;
 
 public class BlueRay extends DispositivoAlmacenamiento {
 

@@ -1,6 +1,6 @@
-package dev.samuelrubio.clases;
+package dev.samuelrubio.modelo.giratorio;
 
-import dev.samuelrubio.ObjetoGiratorio;
+import dev.samuelrubio.modelo.ObjetoGiratorio;
 
 public class Rueda extends ObjetoGiratorio {
 
@@ -12,10 +12,10 @@ public class Rueda extends ObjetoGiratorio {
         GOMA, PLASTICO, METAL
     }
 
-    private Material material; // Goma, plástico, etc.
+    private Material material;
     private double presion; // PSI
     private double diametro;
-    private TipoTerreno tipoTerreno; // Asfalto, tierra, etc.
+    private TipoTerreno tipoTerreno;
 
     public Rueda(String marca, String nombre, double velocidadGiro, Material material, double presion, double diametro, TipoTerreno tipoTerreno) {
         super(marca, nombre, velocidadGiro);

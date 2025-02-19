@@ -1,4 +1,4 @@
-package dev.samuelrubio;
+package dev.samuelrubio.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
