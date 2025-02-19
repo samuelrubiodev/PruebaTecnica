@@ -2,14 +2,20 @@ package dev.samuelrubio.modelo;
 
 /**
  * Clase abstracta que representa un objeto giratorio.
- * Tiene comportamientos basicos como girar y mostrar informacion.
+ * Tiene comportamientos basicos
  */
 public abstract class ObjetoGiratorio {
 
-    private final String marca;
-    private String nombre;
+    private final String marca; // Marca del objeto
+    private String nombre; // Nombre del objeto
     private double velocidadGiro; // RPM
 
+    /**
+     * Constructor de la clase ObjetoGiratorio
+     * @param marca Marca del objeto
+     * @param nombre Nombre del objeto
+     * @param velocidadGiro Velocidad de giro en RPM
+     */
     public ObjetoGiratorio(String marca, String nombre, double velocidadGiro) {
         this.marca = marca;
         this.nombre = nombre;

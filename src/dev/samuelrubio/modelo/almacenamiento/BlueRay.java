@@ -2,6 +2,10 @@ package dev.samuelrubio.modelo.almacenamiento;
 
 import dev.samuelrubio.modelo.DispositivoAlmacenamiento;
 
+/**
+ * Clase que representa un disco Blue Ray herederando de DispositivoAlmacenamiento
+ * Tiene los comportamientos basicos de DispositivoAlmacenamiento y sus propios atributos y comportamientos
+ */
 public class BlueRay extends DispositivoAlmacenamiento {
 
     public enum TipoLaser {
@@ -9,8 +13,19 @@ public class BlueRay extends DispositivoAlmacenamiento {
     }
 
     private TipoLaser tipoLaser;
-    private int logintudOnda;
+    private int logintudOnda; // nm
 
+    /**
+     * Constructor de la clase BlueRay
+     * @param marca Marca del Blue Ray
+     * @param nombre Nombre del Blue Ray
+     * @param velocidadGiro Velocidad de giro del Blue Ray
+     * @param capacidad Capacidad del Blue Ray
+     * @param tipoDisco Tipo de disco del Blue Ray (usando DispositivoAlmacenamiento.TipoDisco)
+     * @param soloLectura Si el Blue Ray es solo lectura
+     * @param tipoLaser Tipo de láser del Blue Ray (usando BlueRay.TipoLaser)
+     * @param logintudOnda Longitud de onda del láser del Blue Ray
+     */
     public BlueRay(String marca, String nombre, double velocidadGiro, int capacidad, TipoDisco tipoDisco, boolean soloLectura, TipoLaser tipoLaser, int logintudOnda) {
         super(marca, nombre, velocidadGiro, capacidad, tipoDisco, soloLectura);
         this.tipoLaser = tipoLaser;

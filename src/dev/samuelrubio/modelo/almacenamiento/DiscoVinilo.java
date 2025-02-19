@@ -2,6 +2,10 @@ package dev.samuelrubio.modelo.almacenamiento;
 
 import dev.samuelrubio.modelo.DispositivoAlmacenamiento;
 
+/**
+ * Clase que representa un disco de vinilo herederando de DispositivoAlmacenamiento
+ * Tiene los comportamientos basicos de DispositivoAlmacenamiento y sus propios atributos y comportamientos
+ */
 public class DiscoVinilo extends DispositivoAlmacenamiento {
 
     public enum Tipo {
@@ -15,6 +19,17 @@ public class DiscoVinilo extends DispositivoAlmacenamiento {
     private Tipo tipo;
     private Genero genero;
 
+    /**
+     * Constructor de la clase DiscoVinilo
+     * @param marca Marca del Vinilo
+     * @param nombre Nombre del Vinilo
+     * @param velocidadGiro Velocidad de giro del Vinilo
+     * @param capacidad Capacidad del Vinilo
+     * @param tipoDisco Tipo de disco del Vinilo (usando DispositivoAlmacenamiento.TipoDisco)
+     * @param soloLectura Si es solo lectura
+     * @param tipo Tipo del Vinilo (usando DiscoVinilo.Tipo)
+     * @param genero Genero del Vinilo (usando DiscoVinilo.Genero)
+     */
     public DiscoVinilo(String marca, String nombre, double velocidadGiro, int capacidad, TipoDisco tipoDisco, boolean soloLectura, Tipo tipo, Genero genero) {
         super(marca, nombre, velocidadGiro, capacidad, tipoDisco,soloLectura);
         this.tipo = tipo;
@@ -49,7 +64,6 @@ public class DiscoVinilo extends DispositivoAlmacenamiento {
     public void detenerReproduccionMusica() {
         System.out.println("Deteniendo reproducción de disco de vinilo...");
     }
-
 
     @Override
     public String toString() {

@@ -2,6 +2,10 @@ package dev.samuelrubio.modelo.almacenamiento;
 
 import dev.samuelrubio.modelo.DispositivoAlmacenamiento;
 
+/**
+ * Clase que representa un CD herederando de DispositivoAlmacenamiento.
+ * Tiene los comportamientos basicos de DispositivoAlmacenamiento y sus propios atributos
+ */
 public class Cd extends DispositivoAlmacenamiento {
 
     public enum TipoLector {
@@ -14,6 +18,17 @@ public class Cd extends DispositivoAlmacenamiento {
     private TipoLector tipoLector;
     private boolean esRegradable; // Si es CD-R o CD-RW
 
+    /**
+     * Constructor de la clase Cd
+     * @param marca Marca del CD
+     * @param nombre Nombre del dispositivo
+     * @param velocidadGiro Velocidad de giro del CD
+     * @param capacidad Capacidad del CD
+     * @param tipoDisco Tipo de disco (usando DispositivoAlmacenamiento.TipoDisco)
+     * @param tipoLector Tipo de lector (usando Cd.TipoLector)
+     * @param esRegradable Si es regrabable
+     * @param soloLectura Si es de solo lectura
+     */
     public Cd(String marca, String nombre, double velocidadGiro, int capacidad, TipoDisco tipoDisco, TipoLector tipoLector, boolean esRegradable, boolean soloLectura) {
         super(marca,nombre, velocidadGiro, capacidad, tipoDisco, soloLectura);
         this.esRegradable = esRegradable;

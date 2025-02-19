@@ -2,6 +2,10 @@ package dev.samuelrubio.modelo.almacenamiento;
 
 import dev.samuelrubio.modelo.DispositivoAlmacenamiento;
 
+/**
+ * Clase que representa un disco duro herederando de DispositivoAlmacenamiento.
+ * Tiene los comportamientos basicos de DispositivoAlmacenamiento y sus propios atributos.
+ */
 public class DiscoDuro extends DispositivoAlmacenamiento {
 
     public enum TipoConexion {
@@ -11,6 +15,17 @@ public class DiscoDuro extends DispositivoAlmacenamiento {
     private TipoConexion tipoConexion;
     private boolean esSSD;
 
+    /**
+     * Constructor de la clase DiscoDuro.
+     * @param marca Marca del DiscoDuro
+     * @param nombre Nombre del dispositivo
+     * @param velocidadGiro Velocidad de giro del disco duro
+     * @param capacidad Capacidad del disco duro
+     * @param tipoDisco Tipo de disco (usando DispositivoAlmacenamiento.TipoDisco)
+     * @param tipoConexion Tipo de conexion del disco duro (usando DiscoDuro.TipoConexion)
+     * @param esSSD Si es un disco duro SSD
+     * @param soloLectura Si el disco duro es de solo lectura
+     */
     public DiscoDuro(String marca, String nombre, double velocidadGiro, int capacidad, TipoDisco tipoDisco, TipoConexion tipoConexion, boolean esSSD, boolean soloLectura) {
         super(marca, nombre, velocidadGiro, capacidad, tipoDisco, soloLectura);
         this.tipoConexion = tipoConexion;

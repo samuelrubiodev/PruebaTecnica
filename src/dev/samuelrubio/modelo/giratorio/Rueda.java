@@ -2,6 +2,10 @@ package dev.samuelrubio.modelo.giratorio;
 
 import dev.samuelrubio.modelo.ObjetoGiratorio;
 
+/**
+ * Clase que representa una rueda herederando de ObjetoGiratorio
+ * Tiene los comportamientos basicos de ObjetoGiratorio y sus propios atributos y comportamientos
+ */
 public class Rueda extends ObjetoGiratorio {
 
     public enum TipoTerreno {
@@ -17,6 +21,16 @@ public class Rueda extends ObjetoGiratorio {
     private double diametro;
     private TipoTerreno tipoTerreno;
 
+    /**
+     * Constructor de la clase Rueda
+     * @param marca Marca de la rueda
+     * @param nombre Nombre de la rueda
+     * @param velocidadGiro Velocidad de giro de la rueda
+     * @param material Material de la rueda (usando Rueda.Material)
+     * @param presion Presion de la rueda
+     * @param diametro Diametro de la rueda
+     * @param tipoTerreno Tipo de terreno de la rueda (usando Rueda.TipoTerreno)
+     */
     public Rueda(String marca, String nombre, double velocidadGiro, Material material, double presion, double diametro, TipoTerreno tipoTerreno) {
         super(marca, nombre, velocidadGiro);
         this.material = material;
