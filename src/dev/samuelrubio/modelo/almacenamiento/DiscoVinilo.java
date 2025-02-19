@@ -50,11 +50,12 @@ public class DiscoVinilo extends DispositivoAlmacenamiento {
         System.out.println("Deteniendo reproducción de disco de vinilo...");
     }
 
+
     @Override
-    public void mostrarInformacion() {
-        super.mostrarInformacion();
-        System.out.println("Tipo: " + tipo);
-        System.out.println("Genero: " + genero);
+    public String toString() {
+        return super.toString() +
+                "Tipo: " + tipo +
+                "Genero: " + genero;
     }
 
     public Tipo getTipo() {

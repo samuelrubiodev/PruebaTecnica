@@ -39,11 +39,12 @@ public class DiscoDuro extends DispositivoAlmacenamiento {
         System.out.println("Leyendo datos del disco duro mediante el uso del cabezal magnético.");
     }
 
+
     @Override
-    public void mostrarInformacion() {
-        super.mostrarInformacion();
-        System.out.println("Tipo de conexión: " + tipoConexion);
-        System.out.println("Es SSD: " + (esSSD ? "Sí" : "No"));
+    public String toString() {
+        return super.toString() +
+            "\nTipo de conexión: " + tipoConexion +
+            "\nEs SSD: " + (esSSD ? "Sí" : "No");
     }
 
     public TipoConexion getTipoConexion() {

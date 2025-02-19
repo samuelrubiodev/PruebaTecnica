@@ -34,13 +34,14 @@ public class Frisbee extends ObjetoGiratorio {
         System.out.println("Frisbee aterrizado!");
     }
 
+
     @Override
-    public void mostrarInformacion() {
-        super.mostrarInformacion();
-        System.out.println("Es de competición?: " + (esCompeticion ? "Sí" : "No"));
-        System.out.println("Altura máxima de vuelo: " + altura);
-        System.out.println("Tipo de vuelo: " + tipoVuelo);
-        System.out.println("Es luminoso?: " + (luminoso ? "Sí" : "No"));
+    public String toString() {
+        return super.toString() +
+            "\nEs de competición?: " + (esCompeticion ? "Sí" : "No") +
+            "\nAltura máxima de vuelo: " + altura +
+            "\nTipo de vuelo: " + tipoVuelo +
+            "\nEs luminoso?: " + (luminoso ? "Sí" : "No") + "\n";
     }
 
     public boolean isEsCompeticion() {

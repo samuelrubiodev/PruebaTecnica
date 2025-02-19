@@ -19,21 +19,21 @@ public class Main {
 
         System.out.println("----- CD -----\n");
 
-        cd1.mostrarInformacion();
+        System.out.println(cd1);
         System.out.println("\n");
         cd1.girar();
         cd1.escribir("Datos de música");
         cd1.leer();
-        cd1.mostrarInformacion();
+        System.out.println(cd1);
 
         System.out.println("\n----- Disco Duro -----\n");
 
-        disco1.mostrarInformacion();
+        System.out.println(disco1);
         System.out.println("\n");
         disco1.girar();
         disco1.escribir("Datos de trabajo");
         disco1.leer();
-        disco1.mostrarInformacion();
+        System.out.println(disco1);
 
         System.out.println("\n----- Disco Vinilo -----\n");
 
@@ -43,27 +43,26 @@ public class Main {
         miVinilo.reproducirMusica();
         miVinilo.detenerReproduccionMusica();
         System.out.println("\n");
-        miVinilo.mostrarInformacion();
+        System.out.println(miVinilo);
 
         System.out.println("\n----- Blue Ray -----\n");
 
-        blueRay.mostrarInformacion();
-        System.out.println("\n");
+        System.out.println(blueRay);
         blueRay.girar();
         blueRay.escribir("Datos de video");
         blueRay.leer();
         blueRay.reproducirVideo();
         blueRay.detenerReproduccionVideo();
         System.out.println("\n");
-        blueRay.mostrarInformacion();
+        System.out.println(blueRay);
 
         System.out.println("\n----- Rueda -----\n");
-        rueda.mostrarInformacion();
+        System.out.println(rueda);
         rueda.girar();
         rueda.detener();
 
         System.out.println("\n----- Frisbee -----\n");
-        frisbee.mostrarInformacion();
+        System.out.println(frisbee);
         frisbee.girar();
         frisbee.lanzar();
         frisbee.aterrizar();

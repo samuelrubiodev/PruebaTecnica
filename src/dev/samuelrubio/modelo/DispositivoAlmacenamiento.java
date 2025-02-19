@@ -3,18 +3,23 @@ package dev.samuelrubio.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase abstracta que representa un dispositivo de almacenamiento.
+ * Tiene comportamientos basicos como girar, almacenar datos, leer y escribir.
+ */
 public abstract class DispositivoAlmacenamiento extends ObjetoGiratorio {
 
+    // Enumeracion que representa el tipo de disco
     public enum TipoDisco {
         HDD, SSD, CD, DVD, VINILO, BLUERAY, CD_R
     }
 
-    private final String marca;
-    private String nombre;
-    private int capacidad;
-    private List<String> contenido;
+    private final String marca; // Marca del dispositivo
+    private String nombre; // Nombre del dispositivo
+    private int capacidad; // Capacidad en GB
+    private List<String> contenido; // Contenido almacenado
     private TipoDisco tipoDisco;
-    private final boolean soloLectura;
+    private final boolean soloLectura; // Si es solo lectura
 
     public DispositivoAlmacenamiento(String marca, String nombre, double velocidadGiro, int capacidad, TipoDisco tipoDisco, boolean soloLectura) {
         super(marca, nombre, velocidadGiro);
@@ -26,6 +31,7 @@ public abstract class DispositivoAlmacenamiento extends ObjetoGiratorio {
         this.soloLectura = soloLectura;
     }
 
+    // Metodo abstracto que representa el comportamiento de girar el disco
     @Override
     public void girar() {
         girarDisco();
@@ -43,12 +49,12 @@ public abstract class DispositivoAlmacenamiento extends ObjetoGiratorio {
     public abstract void limpiarContenido();
 
     @Override
-    public void mostrarInformacion() {
-        super.mostrarInformacion();
-        System.out.println("Es solo Lectura? : " + (soloLectura ? "Sí" : "No"));
-        System.out.println("Capacidad: " + capacidad + " GB");
-        System.out.println("Tipo de disco: " + tipoDisco);
-        System.out.println("Contenido: " + contenido);
+    public String toString() {
+        return super.toString() +
+            "\nEs solo Lectura? : " + (soloLectura ? "Sí" : "No") +
+            "\nCapacidad: " + capacidad + " GB" +
+            "\nTipo de disco: " + tipoDisco +
+            "\nContenido: " + contenido + "\n";
     }
 
     public boolean isSoloLectura() {

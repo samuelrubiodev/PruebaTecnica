@@ -1,5 +1,9 @@
 package dev.samuelrubio.modelo;
 
+/**
+ * Clase abstracta que representa un objeto giratorio.
+ * Tiene comportamientos basicos como girar y mostrar informacion.
+ */
 public abstract class ObjetoGiratorio {
 
     private final String marca;
@@ -14,10 +18,11 @@ public abstract class ObjetoGiratorio {
 
     public abstract void girar();
 
-    public void mostrarInformacion() {
-        System.out.println("Marca: " + marca);
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Velocidad de giro: " + velocidadGiro + " RPM");
+    @Override
+    public String toString() {
+        return "Marca: " + marca + "\n" +
+                "Nombre: " + nombre + "\n" +
+                "Velocidad de giro: " + velocidadGiro + " RPM";
     }
 
     public String getMarca() {

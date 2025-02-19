@@ -51,6 +51,13 @@ public class BlueRay extends DispositivoAlmacenamiento {
         System.out.println("Limpiando contenido del Blue Ray");
     }
 
+    @Override
+    public String toString() {
+        return super.toString() +
+                "Tipo de láser: " + tipoLaser + "\n" +
+                "Longitud de onda: " + logintudOnda + "\n";
+    }
+
     public TipoLaser getTipoLaser() {
         return tipoLaser;
     }

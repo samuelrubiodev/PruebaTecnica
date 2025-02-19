@@ -43,10 +43,10 @@ public class Cd extends DispositivoAlmacenamiento {
     }
 
     @Override
-    public void mostrarInformacion() {
-        super.mostrarInformacion();
-        System.out.println("Tipo de lector: " + tipoLector);
-        System.out.println("Es regrabable: " + (esRegradable ? "Sí" : "No"));
+    public String toString() {
+        return super.toString() +
+                "Tipo de lector: " + tipoLector +
+                "\nEs regrabable: " + (esRegradable ? "Sí" : "No");
     }
 
     public TipoLector getTipoLector() {

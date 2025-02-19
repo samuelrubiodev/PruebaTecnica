@@ -35,12 +35,12 @@ public class Rueda extends ObjetoGiratorio {
     }
 
     @Override
-    public void mostrarInformacion() {
-        super.mostrarInformacion();
-        System.out.println("Material: " + material);
-        System.out.println("Presión: " + presion);
-        System.out.println("Diámetro: " + diametro);
-        System.out.println("Tipo de terreno: " + tipoTerreno);
+    public String toString() {
+        return super.toString() +
+            "\nMaterial: " + material + "\n" +
+            "Presión: " + presion + "\n" +
+            "Diámetro: " + diametro + "\n" +
+            "Tipo de terreno: " + tipoTerreno + "\n";
     }
 
     public Material getMaterial() {
